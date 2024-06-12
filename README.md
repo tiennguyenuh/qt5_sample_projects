@@ -1,4 +1,4 @@
-# Notepad Project
+# QT5 Sample Projects
 
 This project uses Qt 5.12.10 and is set up for both native builds on an x86_64 machine and cross-compilation for the RZ/G2L platform.
 
