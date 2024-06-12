@@ -141,7 +141,6 @@ DIST          = /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.1
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf \
-		../ledBlinking/.qmake.stash \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf \
@@ -172,6 +171,7 @@ first: all
 
 ledBlinking: ui_mainwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
+	mkdir -p /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/../packages && chmod a+x /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/../packages /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/assets && cp -f /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/build-ledBlinking-RZ_G2L_Qt_5_12_10-Debug/ledBlinking /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/../packages && cp -rf /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/assets /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking/../packages
 
 Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_pre.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/common/unix.conf \
@@ -257,7 +257,6 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf \
@@ -362,7 +361,6 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf:
@@ -541,6 +539,7 @@ moc_mainwindow.cpp: ../ledBlinking/mainwindow.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtouchdevice.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtabwidget.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qicon.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QPixmap \
 		moc_predefs.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/bin/moc
 	/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/bin/moc $(DEFINES) --include /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/build-ledBlinking-RZ_G2L_Qt_5_12_10-Debug/moc_predefs.h -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++ -I/data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/ledBlinking -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore -I. -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/include/c++/8.3.0 -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/include/c++/8.3.0/aarch64-poky-linux -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/include/c++/8.3.0/backward -I/opt/poky/3.1.26/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/8.3.0/include -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/lib64/gcc/aarch64-poky-linux/8.3.0/include -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/include -I/opt/poky/3.1.26/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux/gcc/aarch64-poky-linux/8.3.0/include-fixed -I/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/include ../ledBlinking/mainwindow.h -o moc_mainwindow.cpp
@@ -673,6 +672,7 @@ main.o: ../ledBlinking/main.cpp ../ledBlinking/mainwindow.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtouchdevice.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtabwidget.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qicon.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QPixmap \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QApplication \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qapplication.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qcoreapplication.h \
@@ -789,27 +789,8 @@ mainwindow.o: ../ledBlinking/mainwindow.cpp ../ledBlinking/mainwindow.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtouchdevice.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtabwidget.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qicon.h \
-		ui_mainwindow.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/QVariant \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QApplication \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qapplication.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qcoreapplication.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qeventloop.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qdesktopwidget.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qguiapplication.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qinputmethod.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QMenuBar \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qmenubar.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qmenu.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qaction.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qactiongroup.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QPushButton \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qpushbutton.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qabstractbutton.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QStatusBar \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qstatusbar.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QWidget \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QPixmap
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QPixmap \
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../ledBlinking/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

@@ -154,6 +154,7 @@ DIST          = ../notepad/ui/assets/about.png \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf \
+		../notepad/.qmake.stash \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf \
@@ -184,6 +185,7 @@ first: all
 
 notepad: ui_mainwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
+	mkdir -p /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages && chmod a+x /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/ui/assets && cp -f /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/build-notepad-RZ_G2L_Qt_5_12_10-Debug/notepad /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages && cp -rf /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/ui/assets /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages
 
 Makefile: ../notepad/notepad.pro /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_pre.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/common/unix.conf \
@@ -269,6 +271,7 @@ Makefile: ../notepad/notepad.pro /opt/poky/3.1.26/sysroots/aarch64-poky-linux/us
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf \
@@ -374,6 +377,7 @@ Makefile: ../notepad/notepad.pro /opt/poky/3.1.26/sysroots/aarch64-poky-linux/us
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/qt_config.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/linux-rzg2l-g++/qmake.conf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/exclusive_builds.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/toolchain.prf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/features/default_pre.prf:
@@ -819,6 +823,35 @@ mainwindow.o: ../notepad/mainwindow.cpp ../notepad/mainwindow.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtabwidget.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/QVariant \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QAction \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qaction.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qactiongroup.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QApplication \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qapplication.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qcoreapplication.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qeventloop.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qdesktopwidget.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qguiapplication.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qinputmethod.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QMenu \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qmenu.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QMenuBar \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qmenubar.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QStatusBar \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qstatusbar.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QTextEdit \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtextedit.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qabstractscrollarea.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qframe.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtextdocument.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtextoption.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtextcursor.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtextformat.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qpen.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QToolBar \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qtoolbar.h \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QWidget \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/QFileDialog \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtWidgets/qfiledialog.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/qdir.h \
@@ -828,8 +861,7 @@ mainwindow.o: ../notepad/mainwindow.cpp ../notepad/mainwindow.h \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtCore/QTextStream \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QClipboard \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qclipboard.h \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QTextDocument \
-		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/qtextdocument.h
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/include/QtGui/QTextDocument
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../notepad/mainwindow.cpp
 
 qrc_ui.o: qrc_ui.cpp 

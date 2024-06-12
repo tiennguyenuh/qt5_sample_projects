@@ -23,10 +23,11 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-PKGDIR = $$PWD/../packages
+DESTDIR = /data1/tiennguyen7/8_QtSmarthome/workspace/led_blinking/packages
 
+## Define the command to move the executable and copy assets.
 QMAKE_POST_LINK += \
-    mkdir -p $$PKGDIR && \
-    chmod a+x $$PKGDIR $$PWD/assets && \
-    cp -f $$OUT_PWD/$$TARGET $$PKGDIR && \
-    cp -rf $$PWD/assets $$PKGDIR
+    mkdir -p $$DESTDIR && \
+    chmod a+x $$DESTDIR $$PWD/assets && \
+    cp -rf $$OUT_PWD/$$TARGET $$DESTDIR && \
+    cp -rf $$PWD/assets $$DESTDIR

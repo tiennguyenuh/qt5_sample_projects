@@ -38,3 +38,11 @@ DISTFILES += \
     ui/assets/replace.png \
     ui/assets/save.png \
     ui/assets/save_as.png
+
+PKGDIR = $$PWD/../packages
+
+QMAKE_POST_LINK += \
+	mkdir -p $$PKGDIR && \
+	chmod a+x $$PKGDIR $$PWD/ui/assets && \
+	cp -f $$OUT_PWD/$$TARGET $$PKGDIR && \
+	cp -rf $$PWD/ui/assets $$PKGDIR
