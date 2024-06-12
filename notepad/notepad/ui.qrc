@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/assets/about.png</file>
+        <file>ui/assets/copy.png</file>
+        <file>ui/assets/exit.png</file>
+        <file>ui/assets/find.png</file>
+        <file>ui/assets/new.png</file>
+        <file>ui/assets/notepad.png</file>
+        <file>ui/assets/open.png</file>
+        <file>ui/assets/paste.png</file>
+        <file>ui/assets/replace.png</file>
+        <file>ui/assets/save_as.png</file>
+        <file>ui/assets/save.png</file>
+    </qresource>
+</RCC>
