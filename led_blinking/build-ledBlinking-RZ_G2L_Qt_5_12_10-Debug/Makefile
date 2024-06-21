@@ -72,21 +72,31 @@ DIST          = /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.1
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/common/linux_arm_device_post.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/qconfig.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_edid_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_input_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimediawidgets.pri \
@@ -95,12 +105,32 @@ DIST          = /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.1
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_network_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_packetprotocol_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_repparser.pri \
@@ -109,6 +139,8 @@ DIST          = /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.1
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_script_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_serialbus.pri \
@@ -128,8 +160,14 @@ DIST          = /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.1
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uiplugin.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_xml.pri \
@@ -188,21 +226,31 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/common/linux_arm_device_post.conf \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/qconfig.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_edid_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_input_support_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimediawidgets.pri \
@@ -211,12 +259,32 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_network_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_packetprotocol_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldebug_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickshapes_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_repparser.pri \
@@ -225,6 +293,8 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_script_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_serialbus.pri \
@@ -244,8 +314,14 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uiplugin.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets_private.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview.pri \
+		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets_private.pri \
 		/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_xml.pri \
@@ -292,21 +368,31 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/devices/common/linux_arm_device_post.conf:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/qconfig.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_accessibility_support_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bluetooth_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_bootstrap_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_charts_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_concurrent_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_core_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_dbus_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_edid_support_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fb_support_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gamepad_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_gui_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_help_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_input_support_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_location_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimedia_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_multimediawidgets.pri:
@@ -315,12 +401,32 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_network_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_networkauth_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_nfc_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_packetprotocol_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioning_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_positioningquick_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_printsupport_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_purchasing_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qml_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldebug_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmldevtools_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_qmltest_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quick_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickshapes_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_quickwidgets_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_remoteobjects_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_repparser.pri:
@@ -329,6 +435,8 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_script_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scripttools_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_scxml_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_sensors_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_serialbus.pri:
@@ -348,8 +456,14 @@ Makefile: ../ledBlinking/ledBlinking.pro /opt/poky/3.1.26/sysroots/aarch64-poky-
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uiplugin.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_uitools_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webchannel_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_websockets_private.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview.pri:
+/opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_webview_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_widgets_private.pri:
 /opt/poky/3.1.26/sysroots/aarch64-poky-linux/usr/local/Qt-5.12.10/mkspecs/modules/qt_lib_xml.pri:

@@ -1,0 +1,19 @@
+This is the Smarthome QML demo application. It shows some user interfaces for controlling an 
+automated house. The user interface is completely done with QML.
+
+Requirement:
+Qt 5.0-beta1 or higher is required.
+
+Build instructions:
+
+Either open the smarthome.pro file and compile that project in the qtcreator, 
+or open a konsole, change to the Smarthome project directory and type:
+> qmake
+> make
+
+Running the application:
+The application can be started directly from the qtcreator or by typing into the console:
+> ./smarthome 
+
+Known issues:
+There's a bug in Qt which causes leaking pixmaps: https://bugreports.qt-project.org/browse/QTBUG-26216

@@ -244,6 +244,7 @@ DIST          = ../notepad/ui/assets/about.png \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/spec_post.prf \
+		../notepad/.qmake.stash \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/default_pre.prf \
@@ -275,6 +276,7 @@ first: all
 
 notepad: ui_mainwindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
+	mkdir -p /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages && chmod a+x /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/ui/assets && cp -f /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/build-notepad-Desktop_Qt_5_12_10_GCC_64bit-Debug/notepad /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages && cp -rf /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/ui/assets /data1/tiennguyen7/8_QtSmarthome/workspace/notepad/notepad/../packages
 
 Makefile: ../notepad/notepad.pro ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux-g++/qmake.conf ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/common/unix.conf \
@@ -450,6 +452,7 @@ Makefile: ../notepad/notepad.pro ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/default_pre.prf \
@@ -646,6 +649,7 @@ Makefile: ../notepad/notepad.pro ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/qt_config.prf:
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/toolchain.prf:
 ../../../Qt5.12.10/5.12.10/gcc_64/mkspecs/features/default_pre.prf:
@@ -1092,6 +1096,35 @@ mainwindow.o: ../notepad/mainwindow.cpp ../notepad/mainwindow.h \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qicon.h \
 		ui_mainwindow.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtCore/QVariant \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QAction \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qaction.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qapplication.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qguiapplication.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qinputmethod.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QMenu \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qmenu.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QMenuBar \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QStatusBar \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QTextEdit \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qtextedit.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qtextdocument.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qtextoption.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qtextformat.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qpen.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QToolBar \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qtoolbar.h \
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QWidget \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/QFileDialog \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtCore/qdir.h \
@@ -1101,8 +1134,7 @@ mainwindow.o: ../notepad/mainwindow.cpp ../notepad/mainwindow.h \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtCore/QTextStream \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/QClipboard \
 		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qclipboard.h \
-		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/QTextDocument \
-		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/qtextdocument.h
+		../../../Qt5.12.10/5.12.10/gcc_64/include/QtGui/QTextDocument
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../notepad/mainwindow.cpp
 
 qrc_ui.o: qrc_ui.cpp 
