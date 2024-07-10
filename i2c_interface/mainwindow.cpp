@@ -17,12 +17,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    qDebug() << "Test";
-
     I2C_Helper i2cHelper;
 
     // Open the I2C bus
-    if (i2cHelper.i2c_open() < 0) {
+    if (i2cHelper.i2c_open(I2C_DEVICE_FILE, I2C_DEVICE_ADDR) < 0) {
         qWarning() << "Failed to open I2C bus";
         return;
     }
@@ -33,5 +31,4 @@ void MainWindow::on_pushButton_clicked()
         return;
     }
 
-    qDebug() << "Test";
 }
