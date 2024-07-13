@@ -3,6 +3,7 @@
 #include <QQmlContext>
 #include "lightcontroller.h"
 #include "myquickview.h"
+#include "serial_port.h"
 
 int pwm_init()
 {
@@ -27,19 +28,21 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
     LightController lightController;
+    SerialPort serialPort;
 
     MyQuickView viewer;
     //viewer.setOrientation(QQuickView::ScreenOrientationAuto);
     viewer.setSource(QUrl("qml/smarthome/smarthome.qml"));
 
     viewer.rootContext()->setContextProperty("lightController", &lightController);
+    viewer.rootContext()->setContextProperty("serialPort", &serialPort);
 
     QObject::connect((QObject*)viewer.engine(), SIGNAL(quit()), &app, SLOT(quit()));
 
     viewer.resize(800, 480);
     viewer.setResizeMode(QQuickView::SizeRootObjectToView);
 
-    pwm_init();
+//    pwm_init();
     viewer.show();
 
     return app.exec();

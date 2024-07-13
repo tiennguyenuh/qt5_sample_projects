@@ -2,14 +2,12 @@
 
 #include "lightcontroller.h"
 #include <QDebug>
+#include <cstdio>
+#include <cstring>
 
 LightController::LightController(QObject *parent) : QObject(parent)
 {
 }
-
-#include <QDebug>
-#include <cstdio>
-#include <cstring>
 
 void LightController::handleValueChanged(int value)
 {

@@ -1,15 +1,17 @@
 TEMPLATE = app
-QT += qml xml quick widgets
+QT += qml xml quick widgets serialport
 DESTDIR = ../smarthome_src
 TARGET = smarthome
 
 SOURCES += src/main.cpp \
     src/lightcontroller.cpp \
-    src/myquickview.cpp
+    src/myquickview.cpp \
+    src/serial_port.cpp
 
 HEADERS += \
     src/lightcontroller.h \
-    src/myquickview.h
+    src/myquickview.h \
+    src/serial_port.h
 
 OTHER_FILES += \
     qml/smarthome/smarthome.qml \
