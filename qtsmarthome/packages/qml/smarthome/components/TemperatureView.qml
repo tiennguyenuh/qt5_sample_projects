@@ -43,6 +43,7 @@ Item {
     property color textColor: "red"
 
     function trailingZero(n) {
+        console.log("Current temperature is ", n)
         return String(n).replace(/^(-?\d+)$/, "$1.0");
     }
 

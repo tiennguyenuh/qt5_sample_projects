@@ -71,6 +71,18 @@ Item {
         mainMenu.showAll();
     }
 
+    Timer {
+        id: timer
+        interval: 1000 // 1 second interval
+        running: true
+        repeat: true
+        onTriggered: updateTemperature()
+    }
+
+    function updateTemperature() {
+        temperature = serialPort.getTemperature()
+    }
+
     /*
     * This sets the main menu to defaultview when clicked
     */

@@ -7,56 +7,48 @@
 
 SerialPort::SerialPort(QObject *parent) : QObject(parent)
 {
-    arduino = new QSerialPort(this);
+    serial = new QSerialPort(this);
     serialBuffer = "";
     parsed_data = "";
     temperature_value = 0.0;
 
-    /*
-     *   Identify the port the arduino uno is on.
-     */
-    bool arduino_is_available = false;
-    QString arduino_uno_port_name;
-    //
-    //  For each available serial port
-    foreach(const QSerialPortInfo &serialPortInfo, QSerialPortInfo::availablePorts()){
-        //  check if the serialport has both a product identifier and a vendor identifier
-        if(serialPortInfo.hasProductIdentifier() && serialPortInfo.hasVendorIdentifier()){
-            //  check if the product ID and the vendor ID match those of the arduino uno
-            if((serialPortInfo.productIdentifier() == arduino_uno_product_id)
-                    && (serialPortInfo.vendorIdentifier() == arduino_uno_vendor_id)){
-                arduino_is_available = true; //    arduino uno is available on this port
-                arduino_uno_port_name = serialPortInfo.portName();
-            }
-        }
-    }
+    this->connect("COM28");
 
     /*
-     *  Open and configure the arduino port if available
+     *  Open and check if the port is connected
      */
-    if(arduino_is_available){
-        qDebug() << "Found the arduino port...\n";
-        arduino->setPortName(arduino_uno_port_name);
-        arduino->open(QSerialPort::ReadOnly);
-        arduino->setBaudRate(QSerialPort::Baud9600);
-        arduino->setDataBits(QSerialPort::Data8);
-        arduino->setFlowControl(QSerialPort::NoFlowControl);
-        arduino->setParity(QSerialPort::NoParity);
-        arduino->setStopBits(QSerialPort::OneStop);
-        QObject::connect(arduino, SIGNAL(readyRead()), this, SLOT(readSerial()));
-    }else{
-        qDebug() << "Couldn't find the correct port for the arduino.\n";
-        qDebug() << this, "Serial Port Error", "Couldn't open serial port to arduino.";
+    if (serial->isOpen())
+    {
+         qDebug() << "Serial Port Is Connected.";
+         qDebug() << serial->error();
     }
+    else
+    {
+        qDebug() << "Serial Port Is Not Connected.";
+        qDebug() << serial->error();
+    }
+
+    QObject::connect(serial, SIGNAL(readyRead()), this, SLOT(readSerial()));
 }
 
 SerialPort::~SerialPort()
 {
-    if(arduino->isOpen()){
-        arduino->close(); //    Close the serial port if it's open.
+    if(serial->isOpen()){
+        serial->close(); //    Close the serial port if it's open.
     }
 }
 
+void SerialPort::connect(QString portName)
+{
+    serial->setPortName(portName);
+    serial->open(QSerialPort::ReadOnly);
+    serial->setBaudRate(QSerialPort::Baud9600);
+    serial->setDataBits(QSerialPort::Data8);
+    serial->setFlowControl(QSerialPort::NoFlowControl);
+    serial->setParity(QSerialPort::NoParity);
+    serial->setStopBits(QSerialPort::OneStop);
+
+}
 void SerialPort::readSerial()
 {
     /*
@@ -64,7 +56,7 @@ void SerialPort::readSerial()
      * The message can arrive split into parts.  Need to buffer the serial data and then parse for the temperature and humidity values.
      *
      */
-    serialData = arduino->readAll();
+    serialData = serial->readAll();
     serialBuffer = serialBuffer + QString::fromStdString(serialData.toStdString());
     serialData.clear();
 
@@ -87,6 +79,8 @@ void SerialPort::readSerial()
 
             if (temp_ok && humi_ok) {
                 qDebug() << "Temperature: " << temp << ", Humidity: " << humi << "\n";
+                this->temperature_value = temp;
+                this->humidity_value = humi;
 //                Dialog::updateTemperature(temp_str);
 //                Dialog::updateHumidity(humi_str); // Assuming you have a similar function for updating humidity
             }
@@ -96,8 +90,13 @@ void SerialPort::readSerial()
         }
     }
 }
-void SerialPort::updateTemperature(QString sensor_reading)
+
+float SerialPort::getTemperature()
 {
-    //  update the value displayed on the lcdNumber
-    //ui->temp_lcdNumber->display(sensor_reading);
+    return this->temperature_value;
+}
+
+float SerialPort::getHumidity()
+{
+    return this->humidity_value;
 }

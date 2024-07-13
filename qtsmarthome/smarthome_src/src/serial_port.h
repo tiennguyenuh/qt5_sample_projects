@@ -14,18 +14,22 @@ public:
     explicit SerialPort(QObject *parent = nullptr);
     ~SerialPort();
 
+public slots:
+    float getTemperature();
+    float getHumidity();
+
 private slots:
+    void connect(QString portName);
     void readSerial();
-    void updateTemperature(QString);
 
 private:
-    QSerialPort *arduino;
-    static const quint16 arduino_uno_vendor_id = 9025;
-    static const quint16 arduino_uno_product_id = 67;
+    QSerialPort *serial;
     QByteArray serialData;
     QString serialBuffer;
     QString parsed_data;
-    double temperature_value;
+    float temperature_value;
+    float humidity_value;
+
 };
 
 #endif // SERIAL_PORT_H
