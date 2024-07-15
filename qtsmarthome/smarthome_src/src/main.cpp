@@ -73,9 +73,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     LightController lightController;
     // SerialPort serialPort;
-    startBackgroundProcess();
+//    startBackgroundProcess();
 
-    QString filePath = "/home/root/qt/serial/data.txt";
+    QString filePath = "data.txt";
     FileReader monitor(filePath);
 
     QObject::connect(&monitor, &FileReader::fileUpdated, &handleFileUpdate);

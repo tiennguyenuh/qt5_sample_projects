@@ -8,10 +8,12 @@ FileReader::FileReader(const QString &filePath, QObject *parent)
 {
     connect(&fileWatcher, &QFileSystemWatcher::fileChanged, this, &FileReader::onFileChanged);
     fileWatcher.addPath(filePath);
+    qDebug() << "FileReader constructed. Watching file:" << filePath;
 }
 
 void FileReader::onFileChanged(const QString &path)
 {
+    qDebug() << "onFileChanged method called for path:" << path;
     if (path == this->filePath)
     {
         QFile file(filePath);
@@ -21,11 +23,15 @@ void FileReader::onFileChanged(const QString &path)
             QString content = in.readAll();
             file.close();
             qDebug() << "File content:" << content;
-            
+
             emit fileUpdated(content);
 
             // Re-add the file to the watcher, since QFileSystemWatcher stops watching after a file change
             fileWatcher.addPath(filePath);
+        }
+        else
+        {
+            qDebug() << "Failed to open file:" << filePath;
         }
     }
 }

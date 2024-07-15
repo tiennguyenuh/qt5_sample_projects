@@ -22,4 +22,4 @@ private:
     QFileSystemWatcher fileWatcher;
 };
 
-#endif // FileReader_H
+#endif // FILE_READER_H
