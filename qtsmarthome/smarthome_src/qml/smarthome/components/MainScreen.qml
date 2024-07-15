@@ -59,7 +59,8 @@ Item {
     property alias temperature: temperatureView.current
     property alias temperatureHigh: temperatureView.maximum
     property alias temperatureLow: temperatureView.minimum
-
+    property bool isUpdated: false
+    property alias prevTemp: temperatureView.current
     /*
     * This functions forces a check in underlying elements
     */
@@ -80,8 +81,30 @@ Item {
     }
 
     function updateTemperature() {
-        
+        var maxVariation = 5;
+        var currentTemperature = sensorData.getTemperature();
+
+        if (isNaN(prevTemp)) {
+            prevTemp = currentTemperature;
+        }
+
+        if (prevTemp !== currentTemperature) {
+            // Temperature has changed, update high and low values
+            temperatureHigh = currentTemperature + (Math.random() * maxVariation);
+            temperatureLow = currentTemperature - (Math.random() * maxVariation);
+            isUpdated = true;
+        } else {
+            // Temperature has not changed, retain previous values
+            isUpdated = false;
+        }
+
+        prevTemp = currentTemperature;
+
+        console.log("Current Temperature:", currentTemperature);
+        console.log("Predicted High Temperature:", temperatureHigh);
+        console.log("Predicted Low Temperature:", temperatureLow);
     }
+
 
     /*
     * This sets the main menu to defaultview when clicked

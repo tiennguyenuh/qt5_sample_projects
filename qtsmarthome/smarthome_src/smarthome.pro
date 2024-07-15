@@ -7,12 +7,14 @@ SOURCES += src/main.cpp \
     src/file_reader.cpp \
     src/lightcontroller.cpp \
     src/myquickview.cpp \
+    src/sensor_data_parse.cpp \
     src/serial_port.cpp
 
 HEADERS += \
     src/file_reader.h \
     src/lightcontroller.h \
     src/myquickview.h \
+    src/sensor_data_parse.h \
     src/serial_port.h
 
 OTHER_FILES += \
