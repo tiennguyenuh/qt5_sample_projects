@@ -12,7 +12,7 @@ SerialPort::SerialPort(QObject *parent) : QObject(parent)
     parsed_data = "";
     temperature_value = 0.0;
 
-    this->connect("COM28");
+    this->connect("/dev/ttySC0");
 
     /*
      *  Open and check if the port is connected
@@ -42,7 +42,7 @@ void SerialPort::connect(QString portName)
 {
     serial->setPortName(portName);
     serial->open(QSerialPort::ReadOnly);
-    serial->setBaudRate(QSerialPort::Baud9600);
+    serial->setBaudRate(QSerialPort::Baud115200);
     serial->setDataBits(QSerialPort::Data8);
     serial->setFlowControl(QSerialPort::NoFlowControl);
     serial->setParity(QSerialPort::NoParity);
@@ -58,6 +58,9 @@ void SerialPort::readSerial()
      */
     serialData = serial->readAll();
     serialBuffer = serialBuffer + QString::fromStdString(serialData.toStdString());
+
+    qDebug() << "New data has come";
+    qDebug() << serialBuffer;
     serialData.clear();
 
     // Check if we have a complete message

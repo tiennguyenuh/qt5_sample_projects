@@ -80,7 +80,7 @@ Item {
     }
 
     function updateTemperature() {
-        temperature = serialPort.getTemperature()
+        
     }
 
     /*

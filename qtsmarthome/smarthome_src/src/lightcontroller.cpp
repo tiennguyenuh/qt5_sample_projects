@@ -14,7 +14,7 @@ void LightController::handleValueChanged(int value)
     qDebug() << "Value changed in LightController:" << value;
 
     // Path to the sysfs files
-    const char* duty_cycle_path = "/sys/class/pwm/pwmchip0/pwm0/duty_cycle";
+    const char* duty_cycle_path = "/sys/class/pwm/pwmchip1/pwm0/duty_cycle";
 
     // Convert the integer value to a string
     char str_value[20];
