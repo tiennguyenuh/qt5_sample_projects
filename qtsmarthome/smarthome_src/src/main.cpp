@@ -5,6 +5,7 @@
 #include "myquickview.h"
 #include "serial_port.h"
 #include <QProcess>
+#include "file_reader.h"
 
 void startBackgroundProcess()
 {
@@ -60,6 +61,12 @@ int pwm_init()
     return 0;
 }
 
+void handleFileUpdate(const QString &content)
+{
+    // Handle the updated file content here
+    qDebug() << "Handling file update:" << content;
+}
+
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
 
@@ -67,6 +74,12 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     LightController lightController;
     // SerialPort serialPort;
     startBackgroundProcess();
+
+    QString filePath = "/home/root/qt/serial/data.txt";
+    FileReader monitor(filePath);
+
+    QObject::connect(&monitor, &FileReader::fileUpdated, &handleFileUpdate);
+
     MyQuickView viewer;
     //viewer.setOrientation(QQuickView::ScreenOrientationAuto);
     viewer.setSource(QUrl("qml/smarthome/smarthome.qml"));

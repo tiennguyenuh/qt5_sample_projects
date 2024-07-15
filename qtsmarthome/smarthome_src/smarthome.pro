@@ -4,11 +4,13 @@ DESTDIR = ../smarthome_src
 TARGET = smarthome
 
 SOURCES += src/main.cpp \
+    src/file_reader.cpp \
     src/lightcontroller.cpp \
     src/myquickview.cpp \
     src/serial_port.cpp
 
 HEADERS += \
+    src/file_reader.h \
     src/lightcontroller.h \
     src/myquickview.h \
     src/serial_port.h
