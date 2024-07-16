@@ -65,6 +65,7 @@ SettingsItem {
     onCurrentWindValueChanged: {
         checkState()
     }
+    
     onCurrentRainValueChanged: {
         checkState()
     }

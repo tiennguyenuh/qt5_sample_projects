@@ -131,7 +131,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     /*hs3001_t hs3001_data*/;
 
     /* Back ground process and file reader */
-    QString filePath = "/home/root/qt/serial/data.txt";
+    QString filePath = "data.txt";
     startBackgroundProcess("/home/root/qt/serial/serial.sh");
 
     FileReader monitor(filePath);

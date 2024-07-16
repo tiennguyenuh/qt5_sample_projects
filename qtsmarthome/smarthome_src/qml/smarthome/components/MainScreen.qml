@@ -80,6 +80,31 @@ Item {
         onTriggered: updateTemperature()
     }
 
+    function predictWeather(temp, humidity) {
+        if (temp >= 28 && temp <= 35 && humidity >= 0 && humidity <= 50) {
+            console.log("It's sunny")
+            return 0; // Sunny
+        } else if (temp >= 25 && temp <= 30 && humidity >= 50 && humidity <= 70) {
+            console.log("It's cloudy")
+            return 1; // Cloudy
+        } else if (temp >= 25 && temp <= 30 && humidity >= 70 && humidity <= 90) {
+            console.log("It's rainy")
+            return 2; // Rainy
+        } else if (temp >= 25 && temp <= 32 && humidity >= 70 && humidity <= 100) {
+            console.log("It's stormy")
+            return 3; // Stormy
+        } else if (temp >= 25 && temp <= 32 && humidity >= 70 && humidity <= 100) {
+            console.log("It's thunder")
+            return 4; // Thunder
+        } else if (temp < 2 && humidity >= 70 && humidity <= 100) {
+            console.log("It's snow")
+            return 5; // Snow
+        } else {
+            return 1; // Default to Cloudy if no conditions are met
+        }
+    }
+
+
     function updateTemperature() {
         var maxVariation = 5;
         var currentTemperature = sensorData.getTemperature();
@@ -103,6 +128,9 @@ Item {
         console.log("Current Temperature:", currentTemperature);
         console.log("Predicted High Temperature:", temperatureHigh);
         console.log("Predicted Low Temperature:", temperatureLow);
+
+        // predict the weather based on temperature and humidity, may not be correct
+        weatherView.weather = predictWeather(currentTemperature, sensorData.getHumdiity())
     }
 
 
