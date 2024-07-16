@@ -82,6 +82,17 @@ SettingsItem {
 
         // if heating is not off and temp is lower than currentTemp, turn it on
         hardwareModels.heatingModel.setProperty( base.itemIndex, "on", !timeOn && temperatureOn )
+
+        lightAdjustment()
+    }
+
+    function lightAdjustment() {
+        if (hardwareModels.heatingModel.get(base.itemIndex).on)
+        {
+            console.log("Set light max")
+            lightController.handleValueChanged(100)
+        }
+        else lightController.handleValueChanged(1)
     }
 
     // is called when the itemindex is changed

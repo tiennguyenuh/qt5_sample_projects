@@ -54,12 +54,13 @@ SettingsItem {
     * It checks the conditions to close/open the window
     */
     function checkState() {
-        var tooMuchRain = windowRainTab.currentSliderActualValue > windowRainTab.currentSliderValue
+        var tooMuchRain = windowRainTab.currentSliderActualValue > windowRainTab.currentSliderValue || 
+                        weatherView.weather == 2 || weatherView.weather == 3 || weatherView.weather == 4
         var tooMuchWind = windowWindTab.currentSliderActualValue > windowWindTab.currentSliderValue
 
-        // if currentRain is higher than rainsetting -> close window
+        // if currentRain is higher than rainsetting -> close window or just rain
         // if wind force is stronger than wind setting -> close window
-        // on is open
+        // on is open 
         hardwareModels.windowModel.setProperty( base.itemIndex, "on", !tooMuchRain && !tooMuchWind)
     }
     onCurrentWindValueChanged: {
