@@ -76,6 +76,7 @@ void handleFileUpdate(const QString &content, SensorData *sensorData)
         qDebug() << "First line data: " << hs3001_str;
         QStringList hs3001_str_split = hs3001_str.split(',');
 
+        if (hs3001_str[hs3001_str.length() - 1] != "#") qDebug() << "Last char diff";
         QString icm_str = lines.at(1);
         qDebug() << "Second line data: " << icm_str;
         QStringList icm_str_split = icm_str.split(',');
@@ -93,11 +94,15 @@ void handleFileUpdate(const QString &content, SensorData *sensorData)
                 qDebug() << "Error parsing HS3001 data: Not enough elements";
             }
 
-            if (icm_str_split.size() >= 9)
+            if (icm_str_split.size() >= 3)
             {
+//                sensorData->setICMMotionData(icm_str_split[0].toInt(), icm_str_split[1].toInt(), icm_str_split[2].toInt(),
+//                                             icm_str_split[3].toInt(), icm_str_split[4].toInt(), icm_str_split[5].toInt(),
+//                                             icm_str_split[6].toInt(), icm_str_split[7].toInt(), icm_str_split[8].toInt());
+
                 sensorData->setICMMotionData(icm_str_split[0].toInt(), icm_str_split[1].toInt(), icm_str_split[2].toInt(),
-                                             icm_str_split[3].toInt(), icm_str_split[4].toInt(), icm_str_split[5].toInt(),
-                                             icm_str_split[6].toInt(), icm_str_split[7].toInt(), icm_str_split[8].toInt());
+                                             0,0,0,
+                                             0,0,0);
             }
             else
             {
@@ -126,8 +131,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     /*hs3001_t hs3001_data*/;
 
     /* Back ground process and file reader */
-    QString filePath = "data.txt";
-    startBackgroundProcess(filePath);
+    QString filePath = "/home/root/qt/serial/data.txt";
+    startBackgroundProcess("/home/root/qt/serial/serial.sh");
 
     FileReader monitor(filePath);
 

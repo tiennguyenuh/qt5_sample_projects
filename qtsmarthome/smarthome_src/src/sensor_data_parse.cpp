@@ -39,7 +39,7 @@ float SensorData::getHumdiity()
 }
 // Setter for HS3001 data
 void SensorData::setHS3001Data(float temperature, float humidity) {
-    hs3001_data.temperature = temperature;
+    hs3001_data.temperature = (temperature - 32)/1.8;
     hs3001_data.humidity = humidity;
 }
 
